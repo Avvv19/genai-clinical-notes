@@ -8,7 +8,6 @@
 [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logoColor=white)](https://langchain.com)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![Healthcare](https://img.shields.io/badge/Healthcare%20AI-FF4081?style=for-the-badge&logoColor=white)](https://github.com/Avvv19)
 
 </div>
 
@@ -16,7 +15,7 @@
 
 ## Overview
 
-**GenAI Clinical Notes** is an AI-powered clinical documentation system that automatically generates structured medical notes from physician-patient conversations. Leveraging large language models (LLMs) and medical NLP, it dramatically reduces documentation burden on healthcare providers — saving hours per day and improving note accuracy.
+AI-powered clinical documentation system that generates structured medical notes from physician-patient conversations. Reduces documentation burden on healthcare providers by automating SOAP notes, discharge summaries, and ICD-10 coding.
 
 ---
 
@@ -101,12 +100,3 @@ python app.py
 - No PHI stored in external services
 - On-premise deployment option available
 - Audit trail for all generated documents
-
----
-
-## Author
-
-**Venkata Vivek Varma Alluru** | AI in Healthcare
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/venkatavivekvarmaalluru/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Avvv19)
