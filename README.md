@@ -1,102 +1,35 @@
-<div align="center">
+# GenAI Clinical Notes - Design Concept
 
-# GenAI Clinical Notes
+This repository is an architecture proposal for converting transcript or text input into structured clinical-document drafts. It currently contains documentation only; no application code, tests, deployment, clinical validation, or EHR integration is implemented.
 
-### AI-Powered Automated Clinical Documentation System
+## Proposed workflow
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
-[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logoColor=white)](https://langchain.com)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+1. Accept approved synthetic or de-identified text input.
+2. Extract candidate clinical entities and required note sections.
+3. Generate a typed draft for a selected document format.
+4. Run required-field, omission, and unsupported-statement checks.
+5. Present the draft to a qualified reviewer for correction and approval.
+6. Optionally map approved output into a FHIR-compatible structure.
 
-</div>
+## Intended evaluation
 
----
+- Required-section completeness
+- Omission and unsupported-statement rates
+- Reviewer corrections and review time
+- Code-suggestion precision
+- FHIR validator results
+- Privacy-aware logging and access-control checks
 
-## Overview
+## Safety and status
 
-AI-powered clinical documentation system that generates structured medical notes from physician-patient conversations. Reduces documentation burden on healthcare providers by automating SOAP notes, discharge summaries, and ICD-10 coding.
+This is a personal design concept, not a medical device or clinical application. It does not diagnose, recommend treatment, replace a qualified reviewer, provide billing codes for operational use, or establish compliance with any healthcare regulation. Any future implementation should use synthetic or explicitly approved data and require human approval for every output.
 
----
+## Future work
 
-## Key Features
+- Add typed schemas and synthetic fixtures
+- Implement a minimal local pipeline
+- Add unit tests for required fields and unsupported statements
+- Add a FHIR validation path
+- Document a threat model and data-retention boundary
 
-- **Automated SOAP Notes** — Generate Subjective, Objective, Assessment, Plan notes from transcripts
-- **Discharge Summaries** — AI-structured discharge documentation compliant with hospital standards
-- **Referral Letters** — Professional referral letters generated in seconds
-- **ICD-10 Code Suggestions** — Automatic diagnosis code recommendations
-- **Voice-to-Note Pipeline** — Speech transcription to structured clinical note
-- **Template Customization** — Adapt templates per specialty (cardiology, oncology, primary care)
-- **FHIR-Compatible Output** — Export notes in FHIR R4 format for EHR integration
-
----
-
-## Tech Stack
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
----
-
-## Workflow
-
-```
-Audio/Text Input
-    |
-    v
-Transcription (Whisper/Azure Speech)
-    |
-    v
-Medical NLP Processing (LangChain + LLM)
-    |
-    v
-Structured Clinical Note Generation
-    |
-    |-- SOAP Notes
-    |-- Discharge Summaries
-    |-- Referral Letters
-    |-- ICD-10 Codes
-    v
-FHIR Export / EHR Integration
-```
-
----
-
-## Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/Avvv19/genai-clinical-notes.git
-cd genai-clinical-notes
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-export OPENAI_API_KEY=your_api_key
-
-# Run the application
-python app.py
-```
-
----
-
-## Use Cases
-
-- **Primary Care Physicians** — Automate routine visit documentation
-- **Specialists** — Generate specialty-specific note templates
-- **Hospitalists** — Rapid admission and discharge summaries
-- **Telehealth Platforms** — Real-time note generation during video consultations
-
----
-
-## Compliance & Privacy
-
-- HIPAA-compliant data handling design
-- No PHI stored in external services
-- On-premise deployment option available
-- Audit trail for all generated documents
+No placeholder code has been added solely to make the concept appear implemented.
