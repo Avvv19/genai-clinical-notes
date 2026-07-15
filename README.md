@@ -1,5 +1,7 @@
 # GenAI Clinical Notes - Design Concept
 
+**Status:** Documentation-only design concept; no application implementation is included.
+
 This repository is an architecture proposal for converting transcript or text input into structured clinical-document drafts. It currently contains documentation only; no application code, tests, deployment, clinical validation, or EHR integration is implemented.
 
 ## Proposed workflow
